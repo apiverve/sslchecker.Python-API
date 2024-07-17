@@ -1,4 +1,4 @@
-SSL Checker API
+SSL Certificate Checker API
 ============
 
 SSL Checker is a simple tool for checking SSL certificates. It returns the SSL certificate details of a website.
@@ -7,12 +7,12 @@ SSL Checker is a simple tool for checking SSL certificates. It returns the SSL c
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [SSL Checker API](https://apiverve.com/marketplace/api/sslchecker)
+This is a Python API Wrapper for the [SSL Certificate Checker API](https://apiverve.com/marketplace/api/sslchecker)
 
 ---
 
 ## Installation
-	pip install apiverve-sslchecker
+	pip install apiverve-sslcertificatechecker
 
 ---
 
@@ -25,14 +25,14 @@ You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ## Usage
 
-The SSL Checker API documentation is found here: [https://docs.apiverve.com/api/sslchecker](https://docs.apiverve.com/api/sslchecker).  
+The SSL Certificate Checker API documentation is found here: [https://docs.apiverve.com/api/sslchecker](https://docs.apiverve.com/api/sslchecker).  
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ```
 # Import the client module
-from apiverve_sslchecker.apiClient import SslcheckerAPIClient
+from apiverve_sslcertificatechecker.apiClient import SslcheckerAPIClient
 
 # Initialize the client with your APIVerve API key
 api = SslcheckerAPIClient("[YOUR_API_KEY]")
@@ -47,7 +47,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-query = {  "url": "https://ebay.com"}
+query = { "domain": "" }
 ```
 
 ###### Simple Request
@@ -93,7 +93,8 @@ print(result)
     "bits": 2048,
     "valid_from": "Feb 26 00:00:00 2024 GMT",
     "valid_to": "Feb 25 23:59:59 2025 GMT",
-    "serialNumber": "D5072F2C3B21834D34FBB048F9A5DAC0"
+    "serialNumber": "D5072F2C3B21834D34FBB048F9A5DAC0",
+    "domain": "ebay.com"
   }
 }
 ```
